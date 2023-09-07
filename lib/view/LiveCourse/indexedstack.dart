@@ -27,7 +27,7 @@ class _IndexedStackTestState extends State<IndexedStackTest> {
                         },
                       );
                     },
-                    child: Text("Widget 1"),
+                    child: const Text("Widget 1"),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -37,7 +37,7 @@ class _IndexedStackTestState extends State<IndexedStackTest> {
                         },
                       );
                     },
-                    child: Text("Widget 2"),
+                    child: const Text("Widget 2"),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -47,7 +47,7 @@ class _IndexedStackTestState extends State<IndexedStackTest> {
                         },
                       );
                     },
-                    child: Text("Widget 13"),
+                    child: const Text("Widget 13"),
                   ),
                 ],
               ),
@@ -76,6 +76,5 @@ class _IndexedStackTestState extends State<IndexedStackTest> {
         ),
       ),
     );
-    ;
   }
 }

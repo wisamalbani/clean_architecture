@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class DrDwBtn extends StatefulWidget {
-  DrDwBtn({super.key});
+  const DrDwBtn({super.key});
 
   @override
   State<DrDwBtn> createState() => _DrDwBtnState();
 }
 
 class _DrDwBtnState extends State<DrDwBtn> {
+  // ignore: avoid_init_to_null
   var text1 = null;
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class _DrDwBtnState extends State<DrDwBtn> {
                 Container(
                   color: Colors.red,
                   child: DropdownButton(
-                    hint: Text("Select Country"),
+                    hint: const Text("Select Country"),
                     isExpanded: true,
                     dropdownColor: Colors.amber,
                     value: text1,
@@ -41,24 +42,22 @@ class _DrDwBtnState extends State<DrDwBtn> {
                     },
                   ),
                 ),
-                Container(
-                  child: DropdownButton(
-                    items: []
-                        .map(
-                          (e) => DropdownMenuItem(
-                            child: Text("$e"),
-                            value: e,
-                          ),
-                        )
-                        .toList(),
-                    hint: Text("Select Fruit"),
-                    value: text1,
-                    isExpanded: true,
-                    dropdownColor: Colors.green,
-                    onChanged: (value) {
-                      setState(() {});
-                    },
-                  ),
+                DropdownButton(
+                  items: []
+                      .map(
+                        (e) => DropdownMenuItem(
+                          value: e,
+                          child: Text("$e"),
+                        ),
+                      )
+                      .toList(),
+                  hint: const Text("Select Fruit"),
+                  value: text1,
+                  isExpanded: true,
+                  dropdownColor: Colors.green,
+                  onChanged: (value) {
+                    setState(() {});
+                  },
                 ),
               ],
             ),

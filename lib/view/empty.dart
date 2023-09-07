@@ -79,7 +79,7 @@ class _CalculatorState extends State<Calculator> {
                             child: Text(
                               textAlign: TextAlign.center,
                               "${hasbeh[i]["sym"]}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 25,
                               ),

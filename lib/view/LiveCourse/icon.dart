@@ -11,7 +11,7 @@ class IconTest extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              Icon(
+              const Icon(
                 Icons.favorite,
                 color: Colors.red,
                 size: 250,
@@ -23,7 +23,7 @@ class IconTest extends StatelessWidget {
                   ),
                 ],
               ),
-              Divider(
+              const Divider(
                 color: Colors.yellow,
                 height: 5,
                 thickness: 10,
@@ -35,7 +35,7 @@ class IconTest extends StatelessWidget {
                 width: 100,
                 height: 100,
               ),
-              Text(
+              const Text(
                 "recognition",
                 style: TextStyle(
                   fontSize: 30,

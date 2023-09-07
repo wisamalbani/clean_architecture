@@ -1,4 +1,4 @@
-import 'dart:ui';
+// ignore_for_file: unnecessary_import, unused_import, file_names
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,20 +12,18 @@ class Test extends StatefulWidget {
 }
 
 class _TestState extends State<Test> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       body: Container(
-        // width: 130,
-          margin: EdgeInsets.symmetric(horizontal: 15,vertical: 15),
-          child:ListView(
+          // width: 130,
+          margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          child: ListView(
             scrollDirection: Axis.vertical,
-            reverse: true,//scroll start from down
-            physics: BouncingScrollPhysics(),//kind of scroll
+            reverse: true, //scroll start from down
+            physics: const BouncingScrollPhysics(), //kind of scroll
             //physics: NeverScrollableScrollPhysics(),//kind of scroll
 
             children: [
@@ -41,9 +39,9 @@ class _TestState extends State<Test> {
               ),
               ListView(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 children: [
-                  Text("data"),
+                  const Text("data"),
                   Container(
                     height: 150,
                     width: 80,
@@ -56,11 +54,8 @@ class _TestState extends State<Test> {
                   ),
                 ],
               ),
-
             ],
-          )
-      ),
-
+          )),
     );
   }
 }

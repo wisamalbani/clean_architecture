@@ -14,18 +14,18 @@ class Signinpage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Welcome",
                   style: TextStyle(
                     fontSize: 50,
-                    color: const Color.fromARGB(255, 236, 212, 137),
+                    color: Color.fromARGB(255, 236, 212, 137),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 Container(
-                  padding: EdgeInsets.all(25),
+                  padding: const EdgeInsets.all(25),
                   width: 350,
                   height: 350,
                   decoration: BoxDecoration(
@@ -36,18 +36,18 @@ class Signinpage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text("Type Your data here:"),
-                      SizedBox(height: 15),
+                      const Text("Type Your data here:"),
+                      const SizedBox(height: 15),
                       Container(
                         alignment: Alignment.center,
                         height: 30,
                         width: 250,
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 247, 236, 198),
+                        decoration: const BoxDecoration(
+                            color: Color.fromARGB(255, 247, 236, 198),
                             borderRadius: BorderRadius.all(
                               Radius.circular(25),
                             )),
-                        child: Row(
+                        child: const Row(
                           children: [
                             Icon(Icons.man),
                             SizedBox(width: 10),
@@ -59,12 +59,12 @@ class Signinpage extends StatelessWidget {
                         alignment: Alignment.center,
                         height: 30,
                         width: 250,
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 247, 236, 198),
+                        decoration: const BoxDecoration(
+                            color: Color.fromARGB(255, 247, 236, 198),
                             borderRadius: BorderRadius.all(
                               Radius.circular(25),
                             )),
-                        child: Row(
+                        child: const Row(
                           children: [
                             Icon(Icons.password),
                             SizedBox(width: 10),
@@ -72,17 +72,17 @@ class Signinpage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: 25),
+                      const SizedBox(height: 25),
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             "Forgot Password ?",
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Container(
                             alignment: Alignment.center,
                             height: 25,
@@ -91,15 +91,15 @@ class Signinpage extends StatelessWidget {
                               color: Colors.blue[700],
                               borderRadius: BorderRadius.circular(25),
                             ),
-                            child: Text(
+                            child: const Text(
                               "Signin",
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
-                          SizedBox(height: 15),
-                          Text(
+                          const SizedBox(height: 15),
+                          const Text(
                             "Signup",
                             style: TextStyle(
                               fontWeight: FontWeight.w600,

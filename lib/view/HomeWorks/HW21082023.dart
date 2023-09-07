@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class HW21082023 extends StatelessWidget {
@@ -11,7 +13,7 @@ class HW21082023 extends StatelessWidget {
         backgroundColor: Colors.grey[350],
         body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(15),
+            padding: const EdgeInsets.all(15),
 
             /// العمود الاساسي يلي فيه كل الواجهة
             child: Column(
@@ -20,7 +22,7 @@ class HW21082023 extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    const Column(
                       children: [
                         Text(
                           "Your Balance",
@@ -51,15 +53,15 @@ class HW21082023 extends StatelessWidget {
                 Container(
                   width: 350,
                   height: 250,
-                  padding: EdgeInsets.all(25),
-                  margin: EdgeInsets.only(top: 20, bottom: 20),
+                  padding: const EdgeInsets.all(25),
+                  margin: const EdgeInsets.only(top: 20, bottom: 20),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     color: Colors.green[700],
                   ),
 
                   /// بداية الكتابة داخل المربع الاخضر
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Row(
@@ -95,7 +97,7 @@ class HW21082023 extends StatelessWidget {
                 /// نهاية المربع الاخضر
 
                 ///بداية  سطر بين المربع الاخضر والايقونات
-                Row(
+                const Row(
                   children: [
                     Text(
                       "For You",
@@ -106,7 +108,7 @@ class HW21082023 extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 ///نهاية  سطر بين المربع الاخضر والايقونات
 
@@ -116,7 +118,7 @@ class HW21082023 extends StatelessWidget {
                   children: [
                     /// بداية محتويات المربع الابيض 1
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       width: 160,
                       height: 150,
                       decoration: BoxDecoration(
@@ -131,7 +133,7 @@ class HW21082023 extends StatelessWidget {
                             width: 100,
                             height: 100,
                           ),
-                          Text(
+                          const Text(
                             "Fruit",
                             style: TextStyle(
                               color: Colors.black,
@@ -147,7 +149,7 @@ class HW21082023 extends StatelessWidget {
 
                     /// بداية محتويات المربيع الابيض 2
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       width: 160,
                       height: 150,
                       decoration: BoxDecoration(
@@ -162,7 +164,7 @@ class HW21082023 extends StatelessWidget {
                             width: 100,
                             height: 100,
                           ),
-                          Text(
+                          const Text(
                             "Vegetable",
                             style: TextStyle(
                               color: Colors.black,
@@ -183,7 +185,7 @@ class HW21082023 extends StatelessWidget {
                   children: [
                     /// بداية محتويات المربيع الابيض 3
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       width: 160,
                       height: 150,
                       decoration: BoxDecoration(
@@ -198,7 +200,7 @@ class HW21082023 extends StatelessWidget {
                             width: 100,
                             height: 100,
                           ),
-                          Text(
+                          const Text(
                             "Cookies",
                             style: TextStyle(
                               color: Colors.black,
@@ -214,7 +216,7 @@ class HW21082023 extends StatelessWidget {
 
                     ///  بداية محتويات المربيع الابيض 4
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       width: 160,
                       height: 150,
                       decoration: BoxDecoration(
@@ -229,7 +231,7 @@ class HW21082023 extends StatelessWidget {
                             width: 100,
                             height: 100,
                           ),
-                          Text(
+                          const Text(
                             "Meat",
                             style: TextStyle(
                               color: Colors.black,

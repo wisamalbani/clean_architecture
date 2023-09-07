@@ -55,16 +55,16 @@ class _ContainerTestState extends State<ContainerTest> {
 
               //  obscureText: true,
               onTap: () {
-                print("on tap");
+                // print("on tap");
               },
               onChanged: (value) {
                 setState(() {
                   text = value;
                 });
-                print(textEditingController.text);
+                // print(textEditingController.text);
               },
               onEditingComplete: () {
-                print("onEditingComplete");
+                // print("onEditingComplete");
                 textEditingController.clear();
               },
               // initialValue: "09",

@@ -16,7 +16,7 @@ class Signin extends StatelessWidget {
             Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(
+            const Center(
               child: Text(
                 "ًWelcome",
                 style: TextStyle(
@@ -24,7 +24,7 @@ class Signin extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
 
@@ -43,15 +43,15 @@ class Signin extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.account_circle_sharp),
-                      SizedBox(width: 5),
+                      const Icon(Icons.account_circle_sharp),
+                      const SizedBox(width: 5),
                       Container(
                         width: 250,
                         height: 30,
                         decoration: BoxDecoration(
                           color: Colors.blueGrey[200],
                         ),
-                        child: Text(
+                        child: const Text(
                           "  User Name",
                           style: TextStyle(
                             fontSize: 20,
@@ -65,15 +65,15 @@ class Signin extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.password),
-                      SizedBox(width: 5),
+                      const Icon(Icons.password),
+                      const SizedBox(width: 5),
                       Container(
                         width: 250,
                         height: 30,
                         decoration: BoxDecoration(
                           color: Colors.blueGrey[200],
                         ),
-                        child: Text(
+                        child: const Text(
                           "  Password",
                           style: TextStyle(
                             fontSize: 20,
@@ -84,46 +84,43 @@ class Signin extends StatelessWidget {
                   ),
 
                   ////مجموعة الازرار الثلاث التفاعلية
-                  Container(
-                    ////زر نسيان كلمة المرور
-                    child: Column(
-                      children: [
-                        Text(
-                          "Forgot Password ?",
+                  Column(
+                    children: [
+                      const Text(
+                        "Forgot Password ?",
+                        style: TextStyle(fontWeight: FontWeight.w700),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+
+                      ////زر تسجيل الدخول
+                      Container(
+                        alignment: Alignment.center,
+                        width: 60,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          color: Colors.indigo[500],
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: const Text(
+                          "Sign In",
                           style: TextStyle(fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(
-                          height: 15,
-                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
 
-                        ////زر تسجيل الدخول
-                        Container(
-                          alignment: Alignment.center,
-                          width: 60,
-                          height: 30,
-                          decoration: BoxDecoration(
-                            color: Colors.indigo[500],
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Text(
-                            "Sign In",
-                            style: TextStyle(fontWeight: FontWeight.w700),
-                          ),
+                      ////زر تسجيل حساب جديد
+                      const Text(
+                        "Sign Up",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 20,
                         ),
-                        SizedBox(
-                          height: 15,
-                        ),
-
-                        ////زر تسجيل حساب جديد
-                        Text(
-                          "Sign Up",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 20,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),

@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, avoid_init_to_null
+
 import 'package:flutter/material.dart';
 
 class hw28082023 extends StatefulWidget {
@@ -21,7 +23,7 @@ class _hw28082023State extends State<hw28082023> {
             children: [
               /// Icon & Text
               Container(
-                margin: EdgeInsets.all(30),
+                margin: const EdgeInsets.all(30),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -40,7 +42,16 @@ class _hw28082023State extends State<hw28082023> {
 
               ////White Container + DropDpwnButtons
               Container(
-                child: Column(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25),
+                  ),
+                  color: Colors.white,
+                ),
+                width: MediaQuery.of(context).size.width,
+                height: 600,
+                child: const Column(
                   children: [
                     SizedBox(height: 25),
                     Row(
@@ -58,15 +69,6 @@ class _hw28082023State extends State<hw28082023> {
                     ),
                   ],
                 ),
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(25),
-                    topRight: Radius.circular(25),
-                  ),
-                  color: Colors.white,
-                ),
-                width: MediaQuery.of(context).size.width,
-                height: 600,
               ),
               ////
             ],
@@ -90,7 +92,7 @@ class _Myddb1State extends State<Myddb1> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       decoration: BoxDecoration(
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(25),
@@ -99,7 +101,7 @@ class _Myddb1State extends State<Myddb1> {
       child: DropdownButtonHideUnderline(
         child: DropdownButton(
           alignment: AlignmentDirectional.centerStart,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           icon: const Icon(Icons.keyboard_arrow_down),
           isExpanded: true,
           hint: const Text(
@@ -112,7 +114,7 @@ class _Myddb1State extends State<Myddb1> {
               .map(
                 (e) => DropdownMenuItem(
                   value: e,
-                  child: Text("$e"),
+                  child: Text(e),
                 ),
               )
               .toList(),
@@ -142,7 +144,7 @@ class _Myddb2State extends State<Myddb2> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       decoration: BoxDecoration(
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(25),
@@ -151,7 +153,7 @@ class _Myddb2State extends State<Myddb2> {
       child: DropdownButtonHideUnderline(
         child: DropdownButton(
           // style: TextStyle(fontWeight: FontWeight.w500),
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           icon: const Icon(Icons.keyboard_arrow_down),
           isExpanded: true,
           hint: const Text(
@@ -164,7 +166,7 @@ class _Myddb2State extends State<Myddb2> {
               .map(
                 (e) => DropdownMenuItem(
                   value: e,
-                  child: Text("$e"),
+                  child: Text(e),
                 ),
               )
               .toList(),

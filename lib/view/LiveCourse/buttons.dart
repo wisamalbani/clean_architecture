@@ -16,22 +16,20 @@ class _AzrarState extends State<Azrar> {
           child: Column(
             children: [
               ElevatedButton(
-                onPressed: () {
-                  print("Button");
-                },
-                child: Text("Button"),
+                onPressed: () {},
+                child: const Text("Button"),
               ),
               ElevatedButton.icon(
                 onPressed: () {},
-                icon: Icon(Icons.abc),
-                label: Text("icon button"),
+                icon: const Icon(Icons.abc),
+                label: const Text("icon button"),
               ),
               MaterialButton(
                 onPressed: () {},
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.abc),
+                icon: const Icon(Icons.abc),
               ),
               InkWell(
                 onTap: () {},

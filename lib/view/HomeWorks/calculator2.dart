@@ -17,7 +17,7 @@ class _Calculator2State extends State<Calculator2> {
       backgroundColor: const Color.fromARGB(255, 30, 30, 30),
       body: SafeArea(
         child: ListView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +50,7 @@ class _Calculator2State extends State<Calculator2> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 325,
                       width: 310,
                       child: Column(
@@ -59,7 +59,7 @@ class _Calculator2State extends State<Calculator2> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: EdgeInsets.all(1.5),
+                                margin: const EdgeInsets.all(1.5),
                                 height: autohightwidth,
                                 width: autohightwidth,
                                 decoration: BoxDecoration(
@@ -74,7 +74,7 @@ class _Calculator2State extends State<Calculator2> {
                                       },
                                     );
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "+",
                                     style: TextStyle(
                                       fontSize: 25,
@@ -85,7 +85,7 @@ class _Calculator2State extends State<Calculator2> {
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.all(1.5),
+                                margin: const EdgeInsets.all(1.5),
                                 height: autohightwidth,
                                 width: autohightwidth,
                                 decoration: BoxDecoration(
@@ -100,7 +100,7 @@ class _Calculator2State extends State<Calculator2> {
                                       },
                                     );
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "-",
                                     style: TextStyle(
                                       fontSize: 25,
@@ -111,7 +111,7 @@ class _Calculator2State extends State<Calculator2> {
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.all(1.5),
+                                margin: const EdgeInsets.all(1.5),
                                 height: autohightwidth,
                                 width: autohightwidth,
                                 decoration: BoxDecoration(
@@ -126,7 +126,7 @@ class _Calculator2State extends State<Calculator2> {
                                       },
                                     );
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "×",
                                     style: TextStyle(
                                       fontSize: 25,
@@ -142,7 +142,7 @@ class _Calculator2State extends State<Calculator2> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: EdgeInsets.all(1.5),
+                                margin: const EdgeInsets.all(1.5),
                                 height: autohightwidth,
                                 width: autohightwidth,
                                 decoration: BoxDecoration(
@@ -157,7 +157,7 @@ class _Calculator2State extends State<Calculator2> {
                                       },
                                     );
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "÷",
                                     style: TextStyle(
                                       fontSize: 25,
@@ -168,7 +168,7 @@ class _Calculator2State extends State<Calculator2> {
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.all(1.5),
+                                margin: const EdgeInsets.all(1.5),
                                 height: autohightwidth,
                                 width: autohightwidth,
                                 decoration: BoxDecoration(
@@ -183,7 +183,7 @@ class _Calculator2State extends State<Calculator2> {
                                       },
                                     );
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "%",
                                     style: TextStyle(
                                       fontSize: 25,
@@ -194,7 +194,7 @@ class _Calculator2State extends State<Calculator2> {
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.all(1.5),
+                                margin: const EdgeInsets.all(1.5),
                                 height: autohightwidth,
                                 width: autohightwidth,
                                 decoration: BoxDecoration(
@@ -209,7 +209,7 @@ class _Calculator2State extends State<Calculator2> {
                                       },
                                     );
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "AC",
                                     style: TextStyle(
                                       fontSize: 25,
@@ -225,7 +225,7 @@ class _Calculator2State extends State<Calculator2> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: EdgeInsets.all(1.5),
+                                margin: const EdgeInsets.all(1.5),
                                 height: autohightwidth,
                                 width: autohightwidth,
                                 decoration: BoxDecoration(
@@ -238,7 +238,7 @@ class _Calculator2State extends State<Calculator2> {
                                       () {},
                                     );
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "±",
                                     style: TextStyle(
                                       fontSize: 25,
@@ -249,7 +249,7 @@ class _Calculator2State extends State<Calculator2> {
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.all(1.5),
+                                margin: const EdgeInsets.all(1.5),
                                 height: autohightwidth,
                                 width: 201,
                                 decoration: BoxDecoration(
@@ -262,7 +262,7 @@ class _Calculator2State extends State<Calculator2> {
                                       () {},
                                     );
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "=",
                                     style: TextStyle(
                                       fontSize: 25,
@@ -284,7 +284,7 @@ class _Calculator2State extends State<Calculator2> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 245,
                       width: 303,
                       child: GridView.builder(
@@ -302,8 +302,7 @@ class _Calculator2State extends State<Calculator2> {
                               setState(
                                 () {
                                   textEditingController.text =
-                                      textEditingController.text +
-                                          "${hasbeh2[i]["sym"]}";
+                                      "${textEditingController.text}${hasbeh2[i]["sym"]}";
                                 },
                               );
                             },
@@ -312,7 +311,7 @@ class _Calculator2State extends State<Calculator2> {
                                 child: Text(
                                   textAlign: TextAlign.center,
                                   "${hasbeh2[i]["sym"]}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 25,
                                   ),
@@ -326,7 +325,7 @@ class _Calculator2State extends State<Calculator2> {
                   ],
                 ),
                 Container(
-                  margin: EdgeInsets.all(1.5),
+                  margin: const EdgeInsets.all(1.5),
                   height: autohightwidth,
                   width: autohightwidth,
                   decoration: BoxDecoration(
@@ -338,11 +337,11 @@ class _Calculator2State extends State<Calculator2> {
                       setState(
                         () {
                           textEditingController.text =
-                              textEditingController.text + "0";
+                              "${textEditingController.text}0";
                         },
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       "0",
                       style: TextStyle(
                         fontSize: 25,

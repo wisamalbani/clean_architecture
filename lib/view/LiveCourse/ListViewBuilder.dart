@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, unnecessary_import, file_names
+
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -18,10 +20,10 @@ class _TestState extends State<Test> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       body: Container(
           // width: 130,
-          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
           child: ListView.builder(
             itemCount: mobile.length,
             itemBuilder: (context, i) {
