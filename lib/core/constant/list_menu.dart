@@ -47,3 +47,15 @@ List hasbeh = [
   {"sym": 3},
   {"sym": "+"},
 ];
+
+List hasbeh2 = [
+  {"sym": 1},
+  {"sym": 2},
+  {"sym": 3},
+  {"sym": 4},
+  {"sym": 5},
+  {"sym": 6},
+  {"sym": 7},
+  {"sym": 8},
+  {"sym": 9},
+];

@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: unused_import
 
-import '../core/constant/list_menu.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import '../../core/constant/list_menu.dart';
 
 class Calculator extends StatefulWidget {
   const Calculator({super.key});
@@ -10,125 +12,84 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  var txtcont;
-  var txtfrmfld;
+  TextEditingController textEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: const Color.fromARGB(255, 30, 30, 30),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 25),
-            //// مربع ادخال الارقام
+            //// Text Form Field
+            SizedBox(
+              // height: 200,
+              width: 300,
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Color.fromARGB(255, 35, 35, 35),
+                ),
+                maxLength: 20,
+                maxLines: 1,
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                autofocus: true,
+                cursorColor: Colors.white,
+                controller: textEditingController,
+                cursorHeight: 25,
+                keyboardType: TextInputType.number,
+                style: const TextStyle(
+                  color: Colors.white54,
+                  fontSize: 25,
+                ),
+              ),
+            ),
+            //// Buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 50,
+                  // color: Colors.blue,
+                  margin: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
+                  height: 375,
                   width: 300,
-                  color: Colors.white,
-                  child: TextFormField(
-                    controller: txtcont,
-                    autofocus: true,
-                    cursorColor: Colors.black,
-                    cursorHeight: 30,
-                    textAlign: TextAlign.center,
-                    keyboardType: TextInputType.number,
-                  ),
-                ),
-              ],
-            ),
-            ///// الازرار
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                    //// ازرار الالة الحاسبة
-                    Column(
-                      children: [
-                        //// الارقام
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          height: 250,
-                          width: 250,
-                          child: GridView.builder(
-                              itemCount: num.length,
-                              gridDelegate:
-                                  SliverGridDelegateWithFixedCrossAxisCount(
-                                childAspectRatio: 1.5,
-                                crossAxisCount: 3,
-                                mainAxisSpacing: 5,
-                                crossAxisSpacing: 5,
-                              ),
-                              itemBuilder: (context, i) {
-                                return IconButton(
-                                  onPressed: () {
-                                    setState(
-                                      () {
-                                        txtfrmfld = 1;
-                                      },
-                                    );
-                                  },
-                                  icon: ListTile(
-                                    tileColor: Colors.grey[400],
-                                    title: Text(
-                                      "${num[i]["no"]}",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 25,
-                                      ),
-                                    ),
-                                  ),
-                                );
-                              }),
-                        ),
-                      ],
+                  child: GridView.builder(
+                    itemCount: hasbeh.length,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      childAspectRatio: 1.25,
+                      crossAxisSpacing: 3,
+                      mainAxisSpacing: 3,
+                      crossAxisCount: 4,
                     ),
-                    SizedBox(width: 10),
-                    //// عمود العمليات الحسابية
-                    Column(
-                      children: [
-                        Container(
-                          // margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                          height: 250,
-                          width: 100,
-                          // color: Colors.amber,
-                          child: GridView.builder(
-                            itemCount: calc.length,
-                            gridDelegate:
-                                SliverGridDelegateWithFixedCrossAxisCount(
-                              childAspectRatio: 1.85,
-                              crossAxisCount: 1,
-                              mainAxisSpacing: 3,
+                    itemBuilder: (context, i) {
+                      return ElevatedButton(
+                        onPressed: () {
+                          setState(
+                            () {},
+                          );
+                        },
+                        child: ListTile(
+                          title: Center(
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              "${hasbeh[i]["sym"]}",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25,
+                              ),
                             ),
-                            itemBuilder: (context, i) {
-                              return IconButton(
-                                onPressed: () {
-                                  setState(
-                                    () {},
-                                  );
-                                },
-                                icon: ListTile(
-                                  tileColor: Colors.grey[400],
-                                  title: Text(
-                                    "${calc[i]["sym"]}",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                    ),
-                                  ),
-                                ),
-                              );
-                            },
                           ),
                         ),
-                      ],
-                    ),
-                  ],
-                ),
+                      );
+                    },
+                  ),
+                )
               ],
             ),
           ],

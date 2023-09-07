@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../core/constant/list_menu.dart';
 
-class Calculator extends StatefulWidget {
-  const Calculator({super.key});
+class Calculator1 extends StatefulWidget {
+  const Calculator1({super.key});
 
   @override
-  State<Calculator> createState() => _CalculatorState();
+  State<Calculator1> createState() => _Calculator1State();
 }
 
-class _CalculatorState extends State<Calculator> {
+class _Calculator1State extends State<Calculator1> {
   TextEditingController textEditingController = TextEditingController();
 
   @override
@@ -20,7 +20,7 @@ class _CalculatorState extends State<Calculator> {
       backgroundColor: const Color.fromARGB(255, 30, 30, 30),
       body: SafeArea(
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //// Text Form Field
             SizedBox(

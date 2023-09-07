@@ -1,4 +1,6 @@
-import 'package:clean_architecture/view/HomeWorks/calculator.dart';
+import 'package:clean_architecture/view/HomeWorks/calculator1.dart';
+import 'package:clean_architecture/view/HomeWorks/calculator2.dart';
+import 'package:clean_architecture/view/HomeWorks/Pages/loginwithstack.dart';
 import 'package:clean_architecture/view/LiveCourse/GridVew.dart';
 import 'package:clean_architecture/view/LiveCourse/textformfiled_test.dart';
 import 'package:flutter/material.dart';
@@ -12,9 +14,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Calculator(),
+      home: Txtfrmhw(),
     );
   }
 }
